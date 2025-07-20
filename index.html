@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunar Grid</title>
+    
+    <!-- Google Fonts: Orbitron for headings, Roboto for body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="https://img.freepik.com/free-vector/sacred-geometry-symbol-background-experience-spiritual-energy_48903479.jpg">
+</head>
+<body>
+
+    <!-- Intro Sequence Elements -->
+    <div class="preloader">
+        <i class="fas fa-atom"></i>
+        <p>CALIBRATING SENSORS...</p>
+    </div>
+    <div class="satellite-launcher">
+        <i class="fas fa-satellite"></i>
+    </div>
+    <div class="intro-page">
+        <div id="space-element-container"></div>
+        <div class="intro-content-wrapper">
+            <h2 class="intro-title"><i class="fas fa-user-astronaut"></i>Project Genesis</h2>
+            <p id="typewriter" class="typewriter-text"></p>
+            <div class="intro-images">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1000" alt="Earth from space" onerror="this.onerror=null;this.src='https://placehold.co/400x300/0a0a1a/00ffff?text=Earth';">
+                <img src="https://images.unsplash.com/photo-1541873676-a18131494184?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c3BhY2V8ZW58MHx8MHx8fDA%3D" alt="Astronaut in space" onerror="this.onerror=null;this.src='https://placehold.co/400x300/0a0a1a/00ffff?text=Astronaut';">
+            </div>
+            <div class="intro-credits">
+                <h4>Image Credits:</h4>
+                <p>Earth by NASA, Astronaut by Jeremy Thomas, both via Unsplash.</p>
+            </div>
+            <button id="enter-dashboard-btn" class="enter-dashboard-btn">Launch Dashboard</button>
+        </div>
+    </div>
+
+    <!-- Main Application -->
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>Lunar Grid</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a class="nav-link" data-page="dashboard"><i class="fas fa-border-all"></i>Dashboard</a></li>
+                <li><a class="nav-link" data-page="galaxy-map"><i class="fas fa-star-map"></i>Galaxy Map</a></li>
+                <li><a class="nav-link" data-page="iss-tracker"><i class="fas fa-satellite"></i>ISS Tracker</a></li>
+                <li><a class="nav-link" data-page="mars-weather"><i class="fas fa-wind"></i>Mars Weather</a></li>
+                <li><a class="nav-link" data-page="telemetry"><i class="fas fa-signal"></i>Telemetry</a></li>
+                <li><a class="nav-link" data-page="asteroids"><i class="fas fa-meteor"></i>Asteroids</a></li>
+                <li><a class="nav-link" data-page="mission-log"><i class="fas fa-clipboard-list"></i>Mission Log</a></li>
+                <li><a class="nav-link" data-page="settings"><i class="fas fa-cog"></i>Settings</a></li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <header class="top-bar">
+                <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+                <h2 id="page-title-display" class="page-title"></h2>
+                <div id="live-clock" class="live-clock"></div>
+            </header>
+            <div id="page-dashboard" class="page"></div>
+            <div id="page-galaxy-map" class="page"></div>
+            <div id="page-iss-tracker" class="page"></div>
+            <div id="page-mars-weather" class="page"></div>
+            <div id="page-telemetry" class="page"></div>
+            <div id="page-asteroids" class="page"></div>
+            <div id="page-mission-log" class="page"></div>
+            <div id="page-settings" class="page"></div>
+        </main>
+    </div>
+    
+    <!-- Modal for Mission Log Reports -->
+    <div id="report-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title"></h2>
+                <button id="modal-close-btn" class="modal-close">&times;</button>
+            </div>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Link to external JS file -->
+    <script src="script.js"></script>
+</body>
+</html>
